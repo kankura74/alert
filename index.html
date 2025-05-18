@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>テンプレート</title>
+<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+</head>
+<body class="zen">
+    <main>
+        
+        <div class="wrapper flex1">            
+            <div class="item1">
+                <h2>うっかりさんのための予定表</h2>
+                <p>3日前、1時間前、5分前にアラートがでるよ！</p>
+            </div>
+            <div class="flex2">
+                <div class="nyuryoku">
+                    <div>
+                        <div class="tokei original-border "></div>
+                    </div>
+                    
+
+                    <form action="*">
+                        <div>
+                            <label for="text">予定内容 :</label>
+                            <input type="text" id="text">
+                        </div>
+                        <div class="nyu_button">
+                            <label for="date">日付 :</label>
+                            <input type="date" id="date">
+                            <label for="time">時間 :</label>
+                            <input type="time" id="time">
+                        </div>
+                    </form>
+                    <button class="original-border2 buto" onclick="addTask()">追加</button>
+                    <button class="original-border2 buto" onclick="clearStorage()">クリア</button>
+                </div>
+
+                <div class="syturyoku">
+                    <section class="item4">
+                        <h3>予定一覧</h3>
+                        <ul class="original-border" id="list"></ul>
+                    </section>
+                    <section class="item5">
+                        <h3 >期限超過</h3>
+                        <ul class="original-border" id="list2"></ul>
+                    </section>
+                </div>
+            </div>
+            
+        </div>
+        
+    </main>
+    <canvas id="canvas"></canvas>
+
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
