@@ -1,0 +1,318 @@
+@charset "UTF-8";
+
+/* 共通部分*/
+/*必要なら書き足すこと*/
+html {
+    font-size: 100%;
+    font-size: clamp( 0.5rem, calc( 0.5rem + 1vw ), 1.5rem );
+}
+
+
+
+.zen {
+    font-family: "Zen Old Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+* {
+    color: hsl(0, 0%, 27%);
+    box-sizing: border-box;
+    letter-spacing: 0.2rem;
+}
+body {
+    /* background-color: #ffffff; */
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+    "ヒラギノ角ゴ Pro W3", sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #b4b4b4;
+    color: aliceblue
+  /* 横スクロール */
+  /* overflow-x: hidden; */
+}
+
+#canvas {
+    position: absolute;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.original-border {
+    color: #626262;
+    border-radius: 25px;
+    background-color: #abaaaafc;
+    border-top: 10px solid #979797;
+    border-left: 10px solid #c7c7c7;
+    box-shadow: 10px 5px 5px rgba(127, 127, 127, 0.009);
+}
+
+button {
+    color: #626262;
+    border-radius:5px;
+    background-color: #a3a3a3;
+    border: #979797;
+    border-top: 3px solid #979797;
+    border-left: 3px solid #b3b3b3;
+}
+
+button:hover {
+    background-color: #9c9c9c;
+    border-top: 3px solid #757575;
+    border-left: 3px solid #757575;
+    color: #0156b7;
+    
+}
+
+.kazari {
+    color: #626262;
+    
+}
+/*共通部分ここまで*/
+
+
+
+.flex1 {
+    text-align: left;
+
+}
+
+.tokei {
+    width: 100%;
+    padding: 5px;
+    margin: 30px 0;
+}
+
+.nyuryoku {
+    flex: 1.5;
+}
+
+.syturyoku {
+    flex: 2;
+}
+
+.flex2 {
+    display: flex;
+    gap: 30px;
+}
+
+
+.wrapper {
+    width:90%;
+    max-width: 1200px;
+    margin: 2vh auto;
+    z-index: 999;
+}
+
+
+
+#text {
+    width: 40%;
+}
+
+#time {
+    width: 20%;
+    
+}
+
+#date {
+    width: 20%;
+}
+
+#text, 
+#time,
+#date {
+    background-color:#eaeaea;
+    border-top: 2px solid #979797;
+    border-left: 2px solid #b3b3b3;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 5px;
+}
+
+#text:hover,
+#time:hover,
+#date:hover {
+    background-color: #9c9c9c;
+    border-top: 3px solid #757575;
+    border-left: 3px solid #757575;
+    color: #0156b7;
+    
+}
+
+
+/* スマホ向け */
+@media (max-width : 768px) {
+
+    #canvas {
+        display: none;
+    }
+
+    .wrapper {
+        text-align: center;
+    }
+    .flex2 {
+        flex-direction: column;
+    }
+
+    .tokei {
+        font-size: 2.5rem;
+        min-height: 100px;
+    }
+
+    .kazari {
+        font-size: 3rem;
+    }
+
+    #text {
+        width: 50%;
+    }
+    
+    #time {
+        width: 15%;
+    }
+    
+    #date {
+        width: 15%;
+    }
+
+    #text, 
+    #time,
+    #date {
+        height: 35px;
+        margin: 10px 0 0 -10px;
+    }
+
+    .buto {
+        width: 15%;
+        height: 35px;
+        margin: 20px 0;
+    }
+
+    ul {
+        width: 100%;
+        min-height: 200px;
+    }
+
+    li {
+        margin: 3px 0;
+    }
+}
+
+
+
+
+/* パソコン向け */
+@media (min-width: 768px) {
+
+    h2 {
+        font-size: 1rem;
+    }
+    .flex2 {
+        display: flex;
+        gap: 60px;
+        max-height: 60vh;
+        padding: 10px
+    }
+    
+    
+    .wrapper {
+        width:90%;
+        max-width: 1500px;
+        max-height: 100vh;
+        /* padding: 10px; */
+        margin: 2vh auto;
+    }
+    
+    .tokei {
+        width: 100%;
+        padding: 30px;
+        margin: 10px 0;
+        font-size: 2rem;
+        min-height: 180px;
+    }
+
+    .kazari {
+        font-size: 2rem;
+    }
+
+    form {    
+        text-align: left;
+        font-size: 0.9rem
+    }
+
+    #text {
+        width: 60%;
+        height: 15%;
+        min-height: 30px;
+    }
+    
+    #time {
+        width: 20%;
+        height: 10%;
+    }
+    
+    #date {
+        width: 20%;
+        height: 10%;
+        margin: 0 0 0 1rem;
+    }
+
+    #text, 
+    #time,
+    #date {
+        min-height: 35px;
+        margin: 10px 0 0 -10px;
+    }
+
+    #date {
+        width: 20%;
+        height: 10%;
+        min-height: 35px;
+        margin: 0 0 0 0.5rem;
+    }
+
+    .buto {
+        width: 30%;
+        max-width: 100px;
+        aspect-ratio: 5/2;
+        margin: 20px 0 0 10px;
+    }
+
+    .nyu_button {
+        margin: 0 0 0 30px;
+    }
+    
+    ul {
+        width: 100%;
+        min-height: 120px;
+        padding: 20px;
+        margin: -10px 0 0 0;
+    }
+
+    .syturyoku {
+        margin: -65px 0 0 0;
+    }
+
+}
